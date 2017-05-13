@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">YelpMap</string>
+    <string name="title_activity_maps">Yelp Restaurants</string>
+    <string name="api_google_key">AIzaSyDkMMyb8qnbkM_6ge32q28jFkZv1r3o5Cc</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="?selectableItemBackground"
+    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:orientation="horizontal">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="36dp"
+                android:id="@+id/img_avt"
+                android:layout_height="36dp"
+                android:layout_margin="16dp"
+                android:src="@color/colorPrimary"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+                <!--Name-->
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="16dp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <!--Rate-->
+                <LinearLayout
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:paddingRight="16dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/rate_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:rating="0"/>
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="30 min"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <!--Content-->
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:paddingRight="15dp"
+                    android:layout_height="wrap_content"
+                    android:text="Went back again to this place since the last time i visited the bay area 5 months ago, and nothing has changed. Still the sketchy Mission, Still the cashier..."
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <View
+                    style="@style/DividerVertical"
+                    android:layout_marginTop="8dp"></View>
+            </LinearLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.duongkk.yelpmap.activities.DetailBusinessActivity"
+    tools:showIn="@layout/activity_detail_business">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            style="@style/Layout_Seleted">
+            <ImageView
+                app:srcCompat="@drawable/ic_phone_black_24dp"
+                style="@style/ImageViewDetail" />
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/TextViewDetail" />
+        </LinearLayout>
+        <View style="@style/DividerVertical" />
+
+        <!--Address-->
+        <LinearLayout style="@style/Layout_Seleted"
+            android:id="@+id/ll_address"
+            >
+            <ImageView
+                app:srcCompat="@drawable/ic_place_black_24dp"
+                style="@style/ImageViewDetail" />
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/TextViewDetail" />
+        </LinearLayout>
+        <View style="@style/DividerVertical" />
+
+        <!--Categories-->
+        <LinearLayout style="@style/Layout_Seleted"
+            >
+            <ImageView
+                app:srcCompat="@drawable/ic_restaurant_black_24dp"
+                style="@style/ImageViewDetail" />
+            <TextView
+                android:id="@+id/tv_categories"
+                style="@style/TextViewDetail" />
+        </LinearLayout>
+        <View style="@style/DividerVertical" />
+
+
+        <!--Rating-->
+        <LinearLayout style="@style/Layout_Seleted"
+            >
+            <ImageView
+                app:srcCompat="@drawable/ic_star_half_black_24dp"
+                style="@style/ImageViewDetail" />
+            <android.support.v7.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                android:layout_gravity="center"
+                android:id="@+id/rate_detail"/>
+        </LinearLayout>
+        <View style="@style/DividerVertical" />
+
+        <!--Reviews-->
+        <LinearLayout style="@style/Layout_Seleted">
+            <ImageView
+                app:srcCompat="@drawable/ic_rate_review_black_24dp"
+                style="@style/ImageViewDetail" />
+            <TextView
+                android:id="@+id/tv_all_review"
+                style="@style/TextViewDetail" />
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="bottom|center_horizontal"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_review"
+            android:layout_width="match_parent"
+            android:scrollbars="vertical"
+            android:clipToPadding="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            />
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
